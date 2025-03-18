@@ -1,7 +1,6 @@
 import json
 import random
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
@@ -15,76 +14,88 @@ url = 'https://instaling.pl/teacher.php?page=login'
 login_set = "2p2259788"
 password_set = "rxuxz"
 
+# Load JSON Data Safely
+try:
+    with open('data.json', 'r') as file:
+        data = json.load(file)
+except (FileNotFoundError, json.JSONDecodeError):
+    data = []
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+
 driver = webdriver.Chrome(options=options)
 action = ActionChains(driver)
 driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 driver.get(url)
-driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-time.sleep(5)
-driver.find_element(By.CLASS_NAME, "fc-primary-button").click()
-login = driver.find_element(By.ID, "log_email")
+
+# Wait for Cookie Button and Click
+WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "fc-primary-button"))).click()
+
+# Login
+login = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "log_email")))
 login.send_keys(login_set)
 password = driver.find_element(By.ID, "log_password")
 password.send_keys(password_set)
+
 login_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
 action.move_to_element(login_button).click().perform()
-time.sleep(random.uniform(1.5, 3.0))
-btn_sesion = driver.find_element(By.CLASS_NAME, "btn-session")
-action.move_to_element(btn_sesion).click().perform()
-time.sleep(random.uniform(1.5, 3.0))   
-start_session_button = driver.find_element(By.ID, "start_session_button");
-continue_session_button = driver.find_element(By.ID, "continue_session_button")
 
-if start_session_button.size['width'] > 0 and start_session_button.size['height'] > 0:
+session_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CLASS_NAME,"btn-session")))
+action.move_to_element(session_button).click().perform()
+
+# Wait for Session Buttons
+try:
+    start_session_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"start_session_button")))
     action.move_to_element(start_session_button).click().perform()
-elif continue_session_button.size['width'] > 0 and continue_session_button.size['height'] > 0:
-    action.move_to_element(continue_session_button).click().perform()
+except:
+    try:
+        continue_session_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "continue_session_button")))
+        action.move_to_element(continue_session_button).click().perform()
+    except:
+        print("No session buttons found.")
 
-
-time.sleep(random.uniform(1.5, 3.0))
-driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-cos = True
-with open('data.json', 'r') as file:
-    data = json.load(file)
-
+# Answer Handling
 def input_answer(ans):
     driver.find_element(By.ID, "answer").send_keys(ans)
     time.sleep(random.uniform(1.5, 3.0))
 
-while(cos):
+while True:
     try:
-        time.sleep(random.uniform(1.5, 3.0))
-        given = driver.find_element(By.CLASS_NAME, "translations").text
+        time.sleep(random.uniform(0.5, 1))
+        given = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "translation"))).text
         german_word = next((entry['german'] for entry in data if entry['polish'] == given), None)
-        print(german_word)
-        if(german_word != None):
-            time.sleep(random.uniform(1.5, 3.0))
+
+        if german_word:
             input_answer(german_word)
-            driver.find_element(By.ID, "check").click()
+            check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"check")))
+            action.move_to_element(check).click().perform()
         else:
-            new_word_var = driver.find_element(By.ID, "dont_know_new")
-            if new_word_var.size['width'] > 0 and new_word_var.size['height'] > 0 and new_word_var:
-                action.move_to_element(driver.find_element(By.ID, "dont_know_new")).click().perform()
-                time.sleep(random.uniform(0.3, 1))
-                action.move_to_element(driver.find_element(By.ID, "skip")).click().perform()
-                time.sleep(random.uniform(1.5, 3.0))
-                continue;
-            time.sleep(random.uniform(1.5, 3.0))
-            action.move_to_element(driver.find_element(By.ID, "check")).click().perform()
-            time.sleep(random.uniform(1.5, 3.0))
-            correct = driver.find_element(By.ID, "word").text
-            print(driver)
-            new_entry = {"german": correct, "polish": given}
+            try:
+                new_word_var = driver.find_element(By.ID, "dont_know_new")
+                if new_word_var.is_displayed():
+                    driver.find_element(By.ID, "dont_know_new").click()
+                    time.sleep(random.uniform(0.1, 1))
+                    driver.find_element(By.ID, "skip").click()
+                    continue
+            except NoSuchElementException:
+                pass
+
+            driver.find_element(By.ID, "check").click()
+            time.sleep(random.uniform(0.2, 0.5))
+            correct = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "word")))
+            correct_text = correct.text;
+            if correct_text == "":
+                print("Correct text is null")
+                break;
+            new_entry = {"german": correct_text, "polish": given}
             data.append(new_entry)
-            print("Updated data:", data)
+
             with open('data.json', 'w') as file:
                 json.dump(data, file, indent=4)
-        time.sleep(random.uniform(1.5, 3.0))
-        action.move_to_element(driver.find_element(By.ID, "nextword")).click().perform()
+        nextword = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"nextword")))
+        action.move_to_element(nextword).click().perform()
     except NoSuchElementException:
+        print("No more words. Exiting.")
         break
-

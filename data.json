@@ -32,7 +32,7 @@
         "polish": "cz\u0142owiek"
     },
     {
-        "german": "das Russland",
+        "german": "Russland",
         "polish": "Rosja"
     },
     {
@@ -198,5 +198,609 @@
     {
         "german": "texten",
         "polish": "pisa\u0107 teksty (np. piosenek)"
+    },
+    {
+        "german": "die Reportage",
+        "polish": ""
+    },
+    {
+        "german": "Angst haben vor",
+        "polish": "ba\u0107 si\u0119 (czego\u015b)"
+    },
+    {
+        "german": "fahren",
+        "polish": "jecha\u0107"
+    },
+    {
+        "german": "die Tiermedizin",
+        "polish": "weterynaria"
+    },
+    {
+        "german": "ungeduldig",
+        "polish": "niecierpliwy"
+    },
+    {
+        "german": "helfen",
+        "polish": "pomaga\u0107"
+    },
+    {
+        "german": "versp\u00e4tet",
+        "polish": "sp\u00f3\u017aniony"
+    },
+    {
+        "german": "dick",
+        "polish": "gruby"
+    },
+    {
+        "german": "flei\u00dfig",
+        "polish": "pracowity, pilny"
+    },
+    {
+        "german": "lesen",
+        "polish": "czyta\u0107"
+    },
+    {
+        "german": "schlafen",
+        "polish": "spa\u0107"
+    },
+    {
+        "german": "schlank",
+        "polish": "szczup\u0142y, smuk\u0142y"
+    },
+    {
+        "german": "das Tierheim",
+        "polish": "schronisko dla zwierz\u0105t"
+    },
+    {
+        "german": "das Russisch",
+        "polish": "j\u0119zyk rosyjski"
+    },
+    {
+        "german": "die Klamotten",
+        "polish": "ciuchy"
+    },
+    {
+        "german": "hilfsbereit",
+        "polish": "pomocny"
+    },
+    {
+        "german": "fremd",
+        "polish": "obcy"
+    },
+    {
+        "german": "flie\u00dfend",
+        "polish": "biegle"
+    },
+    {
+        "german": "das Konsulat",
+        "polish": "konsulat"
+    },
+    {
+        "german": "die Botschaft",
+        "polish": "ambasada"
+    },
+    {
+        "german": "unp\u00fcnktlich",
+        "polish": "niepunktualny"
+    },
+    {
+        "german": "der Chinese",
+        "polish": "Chi\u0144czyk"
+    },
+    {
+        "german": "der Europ\u00e4er",
+        "polish": "Europejczyk"
+    },
+    {
+        "german": "ein wenig",
+        "polish": "troch\u0119"
+    },
+    {
+        "german": "der Kommentar",
+        "polish": "komentarz"
+    },
+    {
+        "german": "verschlossen",
+        "polish": "zamkni\u0119ty"
+    },
+    {
+        "german": "die Toleranz",
+        "polish": "tolerancja"
+    },
+    {
+        "german": "die Offenheit",
+        "polish": "szczero\u015b\u0107, otwarto\u015b\u0107"
+    },
+    {
+        "german": "die Muttersprache",
+        "polish": "j\u0119zyk ojczysty"
+    },
+    {
+        "german": "sprechen",
+        "polish": "m\u00f3wi\u0107, rozmawia\u0107"
+    },
+    {
+        "german": "der Profisportler",
+        "polish": "zawodowy sportowiec"
+    },
+    {
+        "german": "perfekt",
+        "polish": "doskona\u0142y; perfekcyjny"
+    },
+    {
+        "german": "der Brasilianer",
+        "polish": "Brazylijczyk"
+    },
+    {
+        "german": "der Diplomat",
+        "polish": "dyplomata"
+    },
+    {
+        "german": "der Schriftsteller",
+        "polish": "pisarz"
+    },
+    {
+        "german": "die Statistik",
+        "polish": "statystyka"
+    },
+    {
+        "german": "der Krimi",
+        "polish": "krymina\u0142"
+    },
+    {
+        "german": "die Kommunikation",
+        "polish": "komunikacja, porozumiewanie si\u0119"
+    },
+    {
+        "german": "das Chinesisch",
+        "polish": "j\u0119zyk chi\u0144ski"
+    },
+    {
+        "german": "der Osten",
+        "polish": "wsch\u00f3d"
+    },
+    {
+        "german": "in der ganzen Welt",
+        "polish": "na ca\u0142ym \u015bwiecie"
+    },
+    {
+        "german": "das Fotomodell",
+        "polish": "fotomodel"
+    },
+    {
+        "german": "das Ungarisch",
+        "polish": "j\u0119zyk w\u0119gierski"
+    },
+    {
+        "german": "intelligent",
+        "polish": "inteligentny"
+    },
+    {
+        "german": "lieb",
+        "polish": "drogi, kochany"
+    },
+    {
+        "german": "der Ungar",
+        "polish": "W\u0119gier"
+    },
+    {
+        "german": "das Norwegisch",
+        "polish": "j\u0119zyk norweski"
+    },
+    {
+        "german": "werden",
+        "polish": "sta\u0107 si\u0119"
+    },
+    {
+        "german": "das Portugiesisch",
+        "polish": "j\u0119zyk portugalski"
+    },
+    {
+        "german": "das Japanisch",
+        "polish": "j\u0119zyk japo\u0144ski"
+    },
+    {
+        "german": "das Schwedisch",
+        "polish": "j\u0119zyk szwedzki"
+    },
+    {
+        "german": "kein Wort",
+        "polish": "ani s\u0142owa"
+    },
+    {
+        "german": "der Naturfreund",
+        "polish": "mi\u0142o\u015bnik przyrody"
+    },
+    {
+        "german": "das Kommunikationsverhalten",
+        "polish": "zachowania komunikacyje"
+    },
+    {
+        "german": "die Gartenarbeit",
+        "polish": "praca w ogrodzie, ogrodnictwo"
+    },
+    {
+        "german": "das Schachspielen",
+        "polish": "gra w szachy"
+    },
+    {
+        "german": "der Schulgarten",
+        "polish": "szkolny ogr\u00f3d"
+    },
+    {
+        "german": "das Interesse",
+        "polish": "zainteresowanie"
+    },
+    {
+        "german": "klassische Musik",
+        "polish": "muzyka klasyczna"
+    },
+    {
+        "german": "der Jugendliche",
+        "polish": "nastolatek"
+    },
+    {
+        "german": "das Reisen",
+        "polish": "podr\u00f3\u017cowanie"
+    },
+    {
+        "german": "h\u00fcbsch",
+        "polish": "pi\u0119kny"
+    },
+    {
+        "german": "telefonieren",
+        "polish": "telefonowa\u0107, dzwoni\u0107"
+    },
+    {
+        "german": "die Strategie",
+        "polish": "strategia"
+    },
+    {
+        "german": "die Logistik",
+        "polish": "logistyka"
+    },
+    {
+        "german": "die Logik",
+        "polish": "logika"
+    },
+    {
+        "german": "der Geburtstag",
+        "polish": "urodziny"
+    },
+    {
+        "german": "der Koffer",
+        "polish": "walizka, waliza"
+    },
+    {
+        "german": "die CD",
+        "polish": "p\u0142yta CD"
+    },
+    {
+        "german": "verbringen",
+        "polish": "sp\u0119dza\u0107"
+    },
+    {
+        "german": "der Brief",
+        "polish": "list"
+    },
+    {
+        "german": "der Urlaub",
+        "polish": "urlop"
+    },
+    {
+        "german": "das Kochbuch",
+        "polish": "ksi\u0105\u017cka kucharska"
+    },
+    {
+        "german": "das Turnier",
+        "polish": "turniej"
+    },
+    {
+        "german": "besprechen",
+        "polish": "omawia\u0107"
+    },
+    {
+        "german": "der Trend",
+        "polish": "trend"
+    },
+    {
+        "german": "benutzen",
+        "polish": "u\u017cywa\u0107; korzysta\u0107"
+    },
+    {
+        "german": "schicken",
+        "polish": "wysy\u0142a\u0107"
+    },
+    {
+        "german": "aussehen",
+        "polish": "wygl\u0105da\u0107"
+    },
+    {
+        "german": "organisieren",
+        "polish": "organizowa\u0107"
+    },
+    {
+        "german": "der Volleyball",
+        "polish": "siatk\u00f3wka, pi\u0142ka siatkowa"
+    },
+    {
+        "german": "normalerweise",
+        "polish": "normalnie"
+    },
+    {
+        "german": "die Postkarte",
+        "polish": "poczt\u00f3wka"
+    },
+    {
+        "german": "das Museum",
+        "polish": "muzeum"
+    },
+    {
+        "german": "kommunizieren",
+        "polish": "komunikowa\u0107 si\u0119"
+    },
+    {
+        "german": "die Literatur",
+        "polish": "literatura"
+    },
+    {
+        "german": "fast",
+        "polish": "niemal, prawie"
+    },
+    {
+        "german": "das Geschenk",
+        "polish": "prezent, podarunek, podarek"
+    },
+    {
+        "german": "das Karate",
+        "polish": "karate"
+    },
+    {
+        "german": "austauschen",
+        "polish": "wymienia\u0107, zmienia\u0107"
+    },
+    {
+        "german": "sich interessieren f\u00fcr",
+        "polish": "interesowa\u0107 si\u0119 czym\u015b, kim\u015b"
+    },
+    {
+        "german": "das Auge",
+        "polish": "oko"
+    },
+    {
+        "german": "grau",
+        "polish": "szary, siwy"
+    },
+    {
+        "german": "gr\u00fcn",
+        "polish": "zielony, zielono"
+    },
+    {
+        "german": "das Haar",
+        "polish": "w\u0142os, w\u0142osy, ow\u0142osienie"
+    },
+    {
+        "german": "lang",
+        "polish": "d\u0142ugi, d\u0142ugo"
+    },
+    {
+        "german": "kurz",
+        "polish": "kr\u00f3tki, kr\u00f3tko"
+    },
+    {
+        "german": "modisch",
+        "polish": "modny"
+    },
+    {
+        "german": "blau",
+        "polish": "niebieski"
+    },
+    {
+        "german": "altmodisch",
+        "polish": "staromodny"
+    },
+    {
+        "german": "braun",
+        "polish": "br\u0105zowy"
+    },
+    {
+        "german": "tragen",
+        "polish": "nosi\u0107"
+    },
+    {
+        "german": "flie\u00dfend",
+        "polish": "biegle, p\u0142ynnie"
+    },
+    {
+        "german": "erledigen",
+        "polish": "za\u0142atwia\u0107"
+    },
+    {
+        "german": "auspacken",
+        "polish": "wypakowywa\u0107"
+    },
+    {
+        "german": "das Tagebuch",
+        "polish": "dziennik, pami\u0119tnik"
+    },
+    {
+        "german": "fliegen",
+        "polish": "lata\u0107"
+    },
+    {
+        "german": "ankommen",
+        "polish": "przyjecha\u0107"
+    },
+    {
+        "german": "abholen",
+        "polish": "odbiera\u0107"
+    },
+    {
+        "german": "der Ausflug",
+        "polish": "wycieczka"
+    },
+    {
+        "german": "das Flugzeug",
+        "polish": "samolot"
+    },
+    {
+        "german": "das W\u00f6rterbuch",
+        "polish": "s\u0142ownik"
+    },
+    {
+        "german": "der Drogerieartikel",
+        "polish": "artyku\u0142 drogeryjny"
+    },
+    {
+        "german": "das Reisefieber",
+        "polish": "gor\u0105czka przed podr\u00f3\u017c\u0105"
+    },
+    {
+        "german": "bleiben",
+        "polish": "zostawa\u0107"
+    },
+    {
+        "german": "abfahren",
+        "polish": "odje\u017cd\u017ca\u0107"
+    },
+    {
+        "german": "einschlafen",
+        "polish": "zasypia\u0107"
+    },
+    {
+        "german": "die Ausstellung",
+        "polish": "wystawa"
+    },
+    {
+        "german": "der Grund",
+        "polish": "pow\u00f3d"
+    },
+    {
+        "german": "die Eintrittskarte",
+        "polish": "bilet wst\u0119pu"
+    },
+    {
+        "german": "das Einkaufszentrum",
+        "polish": "centrum handlowe"
+    },
+    {
+        "german": "die \u00d6ffnungszeiten",
+        "polish": "godziny otwarcia"
+    },
+    {
+        "german": "aufpassen",
+        "polish": "uwa\u017ca\u0107; by\u0107 ostro\u017cnym"
+    },
+    {
+        "german": "waschen",
+        "polish": "my\u0107, zmywa\u0107, pra\u0107"
+    },
+    {
+        "german": "die Ausgabe",
+        "polish": "wydatek"
+    },
+    {
+        "german": "zustimmen",
+        "polish": "zgadza\u0107 si\u0119, akceptowa\u0107"
+    },
+    {
+        "german": "verbessern",
+        "polish": "poprawia\u0107, korygowa\u0107, polepsza\u0107"
+    },
+    {
+        "german": "die Umfrage",
+        "polish": "ankieta, sonda\u017c"
+    },
+    {
+        "german": "die Erm\u00e4\u00dfigung",
+        "polish": "zni\u017cka"
+    },
+    {
+        "german": "zur\u00fcckgeben",
+        "polish": "oddawa\u0107"
+    },
+    {
+        "german": "verstehen",
+        "polish": "rozumie\u0107, pojmowa\u0107"
+    },
+    {
+        "german": "die Onlinereservierung",
+        "polish": "rezerwacja przez internet"
+    },
+    {
+        "german": "das Ticket",
+        "polish": "bilet"
+    },
+    {
+        "german": "kontrollieren",
+        "polish": "kontrolowa\u0107"
+    },
+    {
+        "german": "billig",
+        "polish": "tani"
+    },
+    {
+        "german": "lachen",
+        "polish": "\u015bmia\u0107 si\u0119"
+    },
+    {
+        "german": "der Erwachsene",
+        "polish": "doros\u0142y"
+    },
+    {
+        "german": "ge\u00f6ffnet",
+        "polish": "otwarty"
+    },
+    {
+        "german": "einverstanden",
+        "polish": "zgoda, ustalone"
+    },
+    {
+        "german": "abgemacht",
+        "polish": "ustalone; zgoda"
+    },
+    {
+        "german": "das Recht",
+        "polish": "prawo, s\u0142uszno\u015b\u0107, racja"
+    },
+    {
+        "german": "der Kompromiss",
+        "polish": "kompromis"
+    },
+    {
+        "german": "der Befragte",
+        "polish": "respondent, ankietowany"
+    },
+    {
+        "german": "die Rechnung",
+        "polish": "rachunek, obliczenie, rachuba, faktura"
+    },
+    {
+        "german": "schade",
+        "polish": "szkoda"
+    },
+    {
+        "german": "das Cafe",
+        "polish": "kawiarnia"
+    },
+    {
+        "german": "das Hotel",
+        "polish": "hotel"
+    },
+    {
+        "german": "das Fragezeichen",
+        "polish": "znak zapytania"
+    },
+    {
+        "german": "meckern",
+        "polish": "gdera\u0107; zrz\u0119dzi\u0107"
+    },
+    {
+        "german": "die Atmosph\u00e4re",
+        "polish": "atmosfera"
+    },
+    {
+        "german": "schockieren",
+        "polish": "szokowa\u0107"
     }
 ]
