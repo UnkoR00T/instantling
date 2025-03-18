@@ -11,8 +11,8 @@ import time
 
 # OPTIONS
 url = 'https://instaling.pl/teacher.php?page=login'
-login_set = "xxx"
-password_set = "xxx"
+login_set = "2p2259788"
+password_set = "rxuxz"
 
 # Load JSON Data Safely
 try:
