@@ -58,8 +58,8 @@ except:
 
 # Answer Handling
 def input_answer(ans):
-    driver.find_element(By.ID, "answer").send_keys(ans)
-    time.sleep(random.uniform(1.5, 3.0))
+    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "answer"))).send_keys(ans)
+    time.sleep(random.uniform(0.5, 1.0))
 
 while True:
     try:
@@ -73,16 +73,16 @@ while True:
             action.move_to_element(check).click().perform()
         else:
             try:
-                new_word_var = driver.find_element(By.ID, "dont_know_new")
+                new_word_var = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "dont_know_new")))
                 if new_word_var.is_displayed():
-                    driver.find_element(By.ID, "dont_know_new").click()
+                    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "dont_know_new"))).click()
                     time.sleep(random.uniform(0.1, 1))
-                    driver.find_element(By.ID, "skip").click()
+                    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "skip"))).click()
                     continue
             except NoSuchElementException:
                 pass
 
-            driver.find_element(By.ID, "check").click()
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "check"))).click()
             time.sleep(random.uniform(0.2, 0.5))
             correct = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "word")))
             correct_text = correct.text;
