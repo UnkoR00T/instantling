@@ -846,5 +846,65 @@
     {
         "german": "der Gepard",
         "polish": "gepard"
+    },
+    {
+        "german": "gestern",
+        "polish": "wczoraj"
+    },
+    {
+        "german": "planen",
+        "polish": "planowa\u0107"
+    },
+    {
+        "german": "die Giraffe",
+        "polish": "\u017cyrafa"
+    },
+    {
+        "german": "der L\u00f6we",
+        "polish": "lew"
+    },
+    {
+        "german": "die Mauer",
+        "polish": "mur"
+    },
+    {
+        "german": "das Parlament",
+        "polish": "parlament"
+    },
+    {
+        "german": "passieren",
+        "polish": "wydarza\u0107 si\u0119, zdarza\u0107 si\u0119, przytrafia\u0107 si\u0119"
+    },
+    {
+        "german": "der Tourist",
+        "polish": "turysta"
+    },
+    {
+        "german": "sehenswert",
+        "polish": "godny zobaczenia"
+    },
+    {
+        "german": "die Sehensw\u00fcrdigkeit",
+        "polish": "atrakcja turystyczna, zabytek"
+    },
+    {
+        "german": "das Symbol",
+        "polish": "symbol"
+    },
+    {
+        "german": "der Tiger",
+        "polish": "tygrys"
+    },
+    {
+        "german": "der Pinguin",
+        "polish": "pingwin"
+    },
+    {
+        "german": "aufwachen",
+        "polish": "obudzi\u0107 si\u0119"
+    },
+    {
+        "german": "einpacken",
+        "polish": "zapakowa\u0107"
     }
 ]

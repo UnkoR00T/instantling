@@ -13,7 +13,6 @@ import time
 url = 'https://instaling.pl/teacher.php?page=login'
 login_set = ""
 password_set = ""
-
 # Load JSON Data Safely
 try:
     with open('data.json', 'r') as file:
@@ -58,7 +57,11 @@ except:
 
 # Answer Handling
 def input_answer(ans):
-    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "answer"))).send_keys(ans)
+    answer_field = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.ID, "answer"))
+    )
+    answer_field.clear()
+    answer_field.send_keys(ans)
     time.sleep(random.uniform(0.5, 1.0))
 
 while True:
@@ -83,17 +86,19 @@ while True:
                 pass
 
             WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "check"))).click()
-            time.sleep(random.uniform(0.2, 0.5))
-            correct = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "word")))
-            correct_text = correct.text;
-            if correct_text == "":
-                print("Correct text is null")
-                break;
-            new_entry = {"german": correct_text, "polish": given}
-            data.append(new_entry)
+            time.sleep(random.uniform(0.5, 1))
+            while True:
+                correct = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "word")))
+                correct_text = correct.text;
+                if correct_text == "":
+                    print("Correct text is null")
+                    continue;
+                new_entry = {"german": correct_text, "polish": given}
+                data.append(new_entry)
 
-            with open('data.json', 'w') as file:
-                json.dump(data, file, indent=4)
+                with open('data.json', 'w') as file:
+                    json.dump(data, file, indent=4)
+                    break;
         nextword = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"nextword")))
         action.move_to_element(nextword).click().perform()
     except NoSuchElementException:
