@@ -41,12 +41,14 @@ password.send_keys(password_set)
 login_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
 action.move_to_element(login_button).click().perform()
 
-session_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CLASS_NAME,"btn-session")))
+btn_common = "btn-start-session"
+
+session_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CLASS_NAME, btn_common)))
 action.move_to_element(session_button).click().perform()
 
 # Wait for Session Buttons
 try:
-    start_session_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"start_session_button")))
+    start_session_button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CLASS_NAME, btn_common)))
     action.move_to_element(start_session_button).click().perform()
 except:
     try:
@@ -72,7 +74,7 @@ while True:
 
         if german_word:
             input_answer(german_word)
-            check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"check")))
+            check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check")))
             action.move_to_element(check).click().perform()
         else:
             try:
