@@ -30,7 +30,11 @@ driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () =>
 driver.get(url)
 
 # Wait for Cookie Button and Click
-WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "fc-primary-button"))).click()
+try: 
+    WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.CLASS_NAME, "fc-primary-button"))).click()
+except: 
+    print("Cookie button not found or already clicked.")
+
 
 # Login
 login = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "log_email")))
