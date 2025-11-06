@@ -11,8 +11,8 @@ import time
 
 # OPTIONS
 url = 'https://instaling.pl/teacher.php?page=login'
-login_set = ""
-password_set = ""
+login_set = "3pg295024"
+password_set = "naued"
 # Load JSON Data Safely
 try:
     with open('data.json', 'r') as file:
@@ -78,7 +78,7 @@ while True:
 
         if german_word:
             input_answer(german_word)
-            check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check")))
+            check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check_answer")))
             action.move_to_element(check).click().perform()
         else:
             try:
@@ -91,7 +91,7 @@ while True:
             except NoSuchElementException:
                 pass
 
-            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "check"))).click()
+            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "check_answer"))).click()
             time.sleep(random.uniform(0.5, 1))
             while True:
                 correct = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "word")))

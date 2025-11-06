@@ -1144,10 +1144,6 @@
         "polish": "Unia Europejska"
     },
     {
-        "german": "der Klassenausflug",
-        "polish": "wycieczka klasowa"
-    },
-    {
         "german": "das Br\u00fcssel",
         "polish": "Bruksela"
     },
@@ -1162,5 +1158,153 @@
     {
         "german": "elit\u00e4r",
         "polish": "elitarny"
+    },
+    {
+        "german": "volltanken",
+        "polish": "tankowa\u0107 do pe\u0142na"
+    },
+    {
+        "german": "der Zwischenstopp",
+        "polish": "post\u00f3j"
+    },
+    {
+        "german": "das Teneriffa",
+        "polish": "Teneryfa"
+    },
+    {
+        "german": "die Entspannung",
+        "polish": "relaks"
+    },
+    {
+        "german": "ausleihen",
+        "polish": "wypo\u017cyczy\u0107"
+    },
+    {
+        "german": "der Palast",
+        "polish": "pa\u0142ac"
+    },
+    {
+        "german": "das Segeln",
+        "polish": "\u017ceglarstwo"
+    },
+    {
+        "german": "das Fitnessstudio",
+        "polish": "klub fitness"
+    },
+    {
+        "german": "der Seehafen",
+        "polish": "port morski"
+    },
+    {
+        "german": "kaputt",
+        "polish": "zepsuty"
+    },
+    {
+        "german": "die H\u00f6hle",
+        "polish": "jaskinia, jama"
+    },
+    {
+        "german": "der Luxus",
+        "polish": "luksus"
+    },
+    {
+        "german": "die Pension",
+        "polish": "pensjonat"
+    },
+    {
+        "german": "unternehmen",
+        "polish": "przedsi\u0119wzi\u0105\u0107"
+    },
+    {
+        "german": "die Klassenfahrt",
+        "polish": "wycieczka klasowa"
+    },
+    {
+        "german": "der Pool",
+        "polish": "basen"
+    },
+    {
+        "german": "der F\u00fchrerschein",
+        "polish": "prawo jazdy"
+    },
+    {
+        "german": "der Rezeptionist",
+        "polish": "recepcjonista"
+    },
+    {
+        "german": "die Klimaanlage",
+        "polish": "urz\u0105dzenie klimatyzacyjne, klimatyzator"
+    },
+    {
+        "german": "der Fahrer",
+        "polish": "kierowca"
+    },
+    {
+        "german": "erz\u00e4hlen von D",
+        "polish": "opowiada\u0107 o (zdanie z rodzajnikiem nieokre\u015blonym)"
+    },
+    {
+        "german": "dienstlich",
+        "polish": "s\u0142u\u017cbowo"
+    },
+    {
+        "german": "Kanarischen Inseln",
+        "polish": "Wyspy Kanaryjskie"
+    },
+    {
+        "german": "regnen",
+        "polish": "pada\u0107"
+    },
+    {
+        "german": "die Meeresfr\u00fcchte",
+        "polish": "owoce morza"
+    },
+    {
+        "german": "der Traumurlaub",
+        "polish": "wymarzony urlop"
+    },
+    {
+        "german": "die Rezeption",
+        "polish": "recepcja"
+    },
+    {
+        "german": "die Versp\u00e4tung",
+        "polish": "op\u00f3\u017anienie, sp\u00f3\u017anienie"
+    },
+    {
+        "german": "der Drache",
+        "polish": "smok"
+    },
+    {
+        "german": "die Sphinx",
+        "polish": "Sfinks"
+    },
+    {
+        "german": "die Festspiele",
+        "polish": "festiwal"
+    },
+    {
+        "german": "das Benzin",
+        "polish": "benzyna"
+    },
+    {
+        "german": "angenehm",
+        "polish": "przyjemny"
+    },
+    {
+        "german": "die Station",
+        "polish": "stacja, przystanek"
+    },
+    {
+        "german": "der Service",
+        "polish": "obs\u0142uga"
+    },
+    {
+        "german": "der Hafen",
+        "polish": "port, przysta\u0144"
+    },
+    {
+        "german": "der Vulkan",
+        "polish": "wulkan"
     }
 ]
