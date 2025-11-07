@@ -1306,5 +1306,113 @@
     {
         "german": "der Vulkan",
         "polish": "wulkan"
+    },
+    {
+        "german": "das Gebirge",
+        "polish": "g\u00f3ry"
+    },
+    {
+        "german": "die Insel",
+        "polish": "wyspa"
+    },
+    {
+        "german": "das Schiff",
+        "polish": "statek, okr\u0119t"
+    },
+    {
+        "german": "der See",
+        "polish": "jezioro"
+    },
+    {
+        "german": "die Sonne",
+        "polish": "s\u0142o\u0144ce"
+    },
+    {
+        "german": "tauchen",
+        "polish": "nurkowa\u0107"
+    },
+    {
+        "german": "die Umgebung",
+        "polish": "okolica"
+    },
+    {
+        "german": "das Wetter",
+        "polish": "pogoda"
+    },
+    {
+        "german": "wandern",
+        "polish": "w\u0119drowa\u0107"
+    },
+    {
+        "german": "mitfahren",
+        "polish": "jecha\u0107 z kim\u015b"
+    },
+    {
+        "german": "der Berg",
+        "polish": "g\u00f3ra"
+    },
+    {
+        "german": "das Meer",
+        "polish": "morze"
+    },
+    {
+        "german": "empfehlen",
+        "polish": "poleci\u0107"
+    },
+    {
+        "german": "der Flughafen",
+        "polish": "lotnisko"
+    },
+    {
+        "german": "die Katastrophe",
+        "polish": "katastrofa"
+    },
+    {
+        "german": "das Verkehrsmittel",
+        "polish": "\u015brodek transportu"
+    },
+    {
+        "german": "der Bodensee",
+        "polish": "Jezioro Bode\u0144skie"
+    },
+    {
+        "german": "das Flugticket",
+        "polish": "bilet na samolot"
+    },
+    {
+        "german": "die Nordsee",
+        "polish": "Morze P\u00f3\u0142nocne"
+    },
+    {
+        "german": "ohne",
+        "polish": "bez"
+    },
+    {
+        "german": "die Ostsee",
+        "polish": "Morze Ba\u0142tyckie"
+    },
+    {
+        "german": "die Sommerferien",
+        "polish": "wakacje"
+    },
+    {
+        "german": "das \u00c4gypten",
+        "polish": "Egipt"
+    },
+    {
+        "german": "betreiben",
+        "polish": "uprawia\u0107 (np. sport)"
+    },
+    {
+        "german": "die Alpen",
+        "polish": "Alpy"
+    },
+    {
+        "german": "die Tatra",
+        "polish": "Tatry"
+    },
+    {
+        "german": "gelungen",
+        "polish": "udany"
     }
 ]

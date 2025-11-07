@@ -75,10 +75,15 @@ while True:
         time.sleep(random.uniform(0.5, 1))
         given = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "translation"))).text
         german_word = next((entry['german'] for entry in data if entry['polish'] == given), None)
+        print(f"Given: {given}, Found German: {german_word}")
 
         if german_word:
             input_answer(german_word)
-            check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check_answer")))
+            try:
+                check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check")))
+            except:
+                check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check_answer")))
+                pass
             action.move_to_element(check).click().perform()
         else:
             try:
@@ -88,16 +93,23 @@ while True:
                     time.sleep(random.uniform(0.1, 1))
                     WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "skip"))).click()
                     continue
-            except NoSuchElementException:
+            except:
                 pass
 
-            WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "check_answer"))).click()
+            try:
+                check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check")))
+            except:
+                check = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID, "check_answer")))
+                pass
+            action.move_to_element(check).click().perform()
             time.sleep(random.uniform(0.5, 1))
-            while True:
+            tries = 0
+            while tries < 3:
                 correct = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "word")))
                 correct_text = correct.text;
                 if correct_text == "":
                     print("Correct text is null")
+                    tries += 1
                     continue;
                 new_entry = {"german": correct_text, "polish": given}
                 data.append(new_entry)
@@ -105,8 +117,10 @@ while True:
                 with open('data.json', 'w') as file:
                     json.dump(data, file, indent=4)
                     break;
-        nextword = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"nextword")))
-        action.move_to_element(nextword).click().perform()
-    except NoSuchElementException:
-        print("No more words. Exiting.")
-        break
+        try:
+            nextword = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"nextword")))
+            action.move_to_element(nextword).click().perform()
+        except:
+            pass
+    except:
+        pass
