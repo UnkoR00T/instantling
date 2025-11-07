@@ -11,8 +11,8 @@ import time
 
 # OPTIONS
 url = 'https://instaling.pl/teacher.php?page=login'
-login_set = "3pg295024"
-password_set = "naued"
+login_set = ""
+password_set = ""
 # Load JSON Data Safely
 try:
     with open('data.json', 'r') as file:
