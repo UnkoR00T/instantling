@@ -44,6 +44,11 @@ password.send_keys(password_set)
 
 login_button = driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]')
 action.move_to_element(login_button).click().perform()
+try:
+    trophy_button = driver.find_element(By.ID, "streak-button-close")
+    action.move_to_element(trophy_button).click().perform()
+except:
+    pass
 
 btn_common = "btn-start-session"
 
