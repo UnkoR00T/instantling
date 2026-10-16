@@ -307,21 +307,35 @@ def run_once():
     start_session()
 
     misses = 0
+    idle = 0
+    last_given = None
+    repeats = 0
     while browser_alive():
+        given = None
         try:
-            time.sleep(random.uniform(0.5, 1))
-            given = (
-                WebDriverWait(driver, 5)
-                .until(EC.presence_of_element_located((By.CLASS_NAME, "translation")))
-                .text
-            )
-            misses = 0
+            for el in driver.find_elements(By.CLASS_NAME, "translation"):
+                if el.is_displayed() and el.text.strip():
+                    given = el.text
+                    break
         except Exception:
-            misses += 1
-            if misses >= 2:
-                print("No more words, run finished.")
+            pass
+
+        if not given:
+            idle += 1
+            print(f"No word on screen ({idle}/4)")
+            if idle >= 4:
+                print("Session finished.")
                 return
+            time.sleep(1.5)
             continue
+        idle = 0
+
+        repeats = repeats + 1 if given == last_given else 0
+        last_given = given
+
+        if repeats >= 8:
+            print("Same word 8 times in a row, stopping this run.")
+            return
 
         try:
             german_word = next(
