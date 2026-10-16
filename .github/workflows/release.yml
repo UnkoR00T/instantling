@@ -1,0 +1,92 @@
+name: Build and release
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            name: instaling-bot-windows
+          - os: ubuntu-latest
+            name: instaling-bot-ubuntu
+          - os: macos-latest
+            name: instaling-bot-macos
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tkinter (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y python3-tk
+
+      - name: Install dependencies
+        run: pip install selenium pyinstaller
+
+      - name: Build (Windows / Linux)
+        if: runner.os != 'macOS'
+        shell: bash
+        run: pyinstaller --onefile --windowed --collect-all selenium --name "${{ matrix.name }}" instant.py
+
+      - name: Build (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          pyinstaller --windowed --collect-all selenium --name "${{ matrix.name }}" instant.py
+          # zip the .app with ditto so permissions survive the download
+          ditto -c -k --keepParent "dist/${{ matrix.name }}.app" "dist/${{ matrix.name }}.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.name }}
+          path: |
+            dist/${{ matrix.name }}.exe
+            dist/${{ matrix.name }}.zip
+            dist/${{ matrix.name }}
+          if-no-files-found: error
+
+  build-arch:
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+    steps:
+      - name: Install system packages
+        run: pacman -Syu --noconfirm python python-pip tk binutils git
+
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install selenium pyinstaller
+          .venv/bin/pyinstaller --onefile --windowed --collect-all selenium --name instaling-bot-arch instant.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: instaling-bot-arch
+          path: dist/instaling-bot-arch
+          if-no-files-found: error
+
+  release:
+    needs: [build, build-arch]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Build ${{ github.run_number }}
+          files: dist/*
